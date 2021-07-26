@@ -1,0 +1,27 @@
+
+ <form [formGroup]="signupService.formModel" >
+
+    <div id="login-box">
+        <div class="left">
+          <h1>Sign up</h1>
+          
+          <input type="text" formControlName="username" placeholder="Username" />
+          <input type="text" formControlName="email" placeholder="E-mail" />
+          <input type="password" formControlName="password" placeholder="Password" />
+          <input type="password" formControlName="password2" placeholder="Retype password" />
+          
+          <input type="submit" (click)="signUpUser()"name="signup_submit" value="Sign me up" />
+        </div>
+        
+        <div class="right">
+          <span class="loginwith">Sign in with<br />social network</span>
+          
+          <button class="social-signin facebook">Log in with facebook</button>
+          <button class="social-signin twitter">Log in with Twitter</button>
+          <button class="social-signin google">Log in with Google</button>
+        </div>
+        <div class="or">OR</div>
+      </div>
+
+ </form>
+
