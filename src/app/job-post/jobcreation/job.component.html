@@ -1,0 +1,91 @@
+<div class="job">
+
+    <form [formGroup]="jobService.formModel"> 
+        <div> 
+            <label for="jobTitle">JobTitle:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <br>
+            <input
+             formControlName="jobtitle"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">JobDetails:</label>
+            <br>
+            <input
+             formControlName="jobdetails"
+             type="text">
+        </div>
+        
+        <div> 
+            <label for="jobTitle">Vacancy:</label>
+            <br>
+            <input
+             formControlName="vacancy"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">EmploymentStatus:</label>
+            <br>
+            <input
+             formControlName="employmentstatus"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">Experience:</label>
+            <br>
+            <input
+             formControlName="experience"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">Gender:</label>
+            <br>
+            <input
+             formControlName="gender"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">Salary:</label>
+            <br>
+            <input
+             formControlName="salary"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">Age:</label>
+            <br>
+            <input
+             formControlName="age"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">JobLocation:</label>
+            <br>
+            <input
+             formControlName="joblocation"
+             type="text">
+        </div>
+
+        <div> 
+            <label for="jobTitle">Deadline:</label>
+            <br>
+            <input
+             formControlName="deadline"
+             type="text">
+        </div>
+
+        <div>
+            <button type="submit" (click)="createJob()"  mat-button>Create Job</button>
+        </div>
+
+    </form>
+
+   
+</div>

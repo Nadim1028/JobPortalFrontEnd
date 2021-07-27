@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from  "@angular/router";
 import {SignupService}  from '../service/signup.service';
 
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit {
+
+export class SignupComponent implements OnInit 
+{
 
   constructor(public signupService : SignupService, private router:Router) { }
 
@@ -37,6 +40,7 @@ export class SignupComponent implements OnInit {
       }
     )
   }
+
 
 
 }

@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../service/login.service';
 import { ActivatedRoute, Router } from  "@angular/router";
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from "@angular/material/dialog"
+
+
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
 export class LoginComponent implements OnInit {
 
-  constructor(public loginService:LoginService, private router : Router) { }
+
+  constructor(public loginService:LoginService, private router : Router,public dialog: MatDialog) { }
+
+  
+
+
 
   ngOnInit(): void {
   }

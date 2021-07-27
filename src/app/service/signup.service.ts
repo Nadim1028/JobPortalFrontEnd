@@ -49,7 +49,7 @@ export class SignupService {
       
     //  else{
 
-       return this.http.post<boolean>(this.apiUrl+"jobseekerauth/add", body);
+       return this.http.post<boolean>(this.apiUrl+"employerauth/add", body);
    }
 
 

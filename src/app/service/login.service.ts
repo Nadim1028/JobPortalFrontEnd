@@ -38,7 +38,7 @@ export class LoginService {
     }
      
     else{
-      return this.http.post<boolean>(this.apiUrl+"jobseekerauth/login", body);
+      return this.http.post<boolean>(this.apiUrl+"employerauth/login", body);
     }
       
   }

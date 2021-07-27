@@ -14,13 +14,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './service/login.service';
-import { JobComponent } from './job/job.component';
+import { JobComponent } from './job-post/jobcreation/job.component';
 import { AppRoutesModule } from './app-routes.module';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminComponent } from './admin/admin.component';
-
-
+import { EmployerComponent } from './employer/employer.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { JobseekerComponent } from './jobseeker/jobseeker.component';
+import { JobmanagerComponent } from './job-post/jobmanager/jobmanager.component';
+import { JobUpdateComponent } from './job-post/job-update/job-update.component';
+import { JobDeleteComponent } from './job-post/job-delete/job-delete.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { AdminComponent } from './admin/admin.component';
     HomeComponent,
     SignupComponent,
     AdminComponent,
-  
+    EmployerComponent,
+    JobseekerComponent,
+    JobmanagerComponent,
+    JobUpdateComponent,
+    JobDeleteComponent  
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,8 @@ import { AdminComponent } from './admin/admin.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutesModule
+    AppRoutesModule,
+    MatDialogModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
