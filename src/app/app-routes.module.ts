@@ -8,19 +8,21 @@ import { AdminComponent } from './admin/admin.component';
 import { JobmanagerComponent } from './job-post/jobmanager/jobmanager.component';
 import { JobDeleteComponent } from './job-post/job-delete/job-delete.component';
 import { JobUpdateComponent } from './job-post/job-update/job-update.component';
+import { JobseekerInfoComponent } from './jobseeker-info/jobseeker-info.component';
 
 
 const appRoutes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'employerlogin', component: LoginComponent },
   { path: 'job', component: JobComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'employersignup', component: SignupComponent },
   { path: 'admin', component: AdminComponent }, 
   { path: 'jobmanager', component: JobmanagerComponent },
   { path: 'jobupdate', component: JobUpdateComponent },
-  { path: 'jobdelete', component: JobDeleteComponent }
+  { path: 'jobdelete', component: JobDeleteComponent },
+  { path: 'jobseekerinfo', component: JobseekerInfoComponent }
 ]
 
 @NgModule({

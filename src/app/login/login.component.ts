@@ -31,15 +31,26 @@ export class LoginComponent implements OnInit {
       {
         if(response!=null)
         {
-            if(response==true)
+            if(response!=false)
             {
              // alert("Login successful");
               console.log("This is response = "+response);
 
+             
               if(this.loginService.formModel.value.username=="admin" && this.loginService.formModel.value.password=="nadim123" )
+             {
+               localStorage.setItem("isLoggedIn","admin");
+
               this.router.navigate(["admin"])
-              else
-                this.router.navigate(["job"])
+
+             }
+              else{
+                localStorage.setItem("isLoggedIn","employer");
+                localStorage.setItem("user", JSON.stringify(response));
+
+                this.router.navigate(["home"])
+
+              }
             }
 
             else

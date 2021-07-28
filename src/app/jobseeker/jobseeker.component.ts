@@ -12,4 +12,8 @@ export class JobseekerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  signUpUser(){
+    
+  }
+
 }

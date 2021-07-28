@@ -2,3 +2,12 @@
     padding : 10px;
     align-content: center;
 }
+
+.center {
+    padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 400px;
+    }

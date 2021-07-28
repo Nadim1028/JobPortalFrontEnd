@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder,Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import {jobpost} from "src/app/models/jobpost"
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +11,7 @@ import { FormBuilder,Validators } from '@angular/forms';
 export class JobService {
 
   private apiUrl = "http://localhost:5001/api/";
+
   constructor(private formBuilder:FormBuilder,private formBuilder1:FormBuilder,private http: HttpClient) { }
 
   formModel = this.formBuilder.group({
@@ -100,5 +104,21 @@ export class JobService {
         alert("give a job title.")
      }
    }
+
+
+   deleteJobService(jobid : any){
+    alert("deleteJob = "+jobid);
+    return this.http.delete<any>(this.apiUrl+"job/delete",{params:{"jobId":jobid}});
+   }
+
+   getJobs(): Observable<jobpost[]>{
+    return this.http.get<jobpost[]>(this.apiUrl+"job/getAll");
+   }
+
+   public getJobsBysearchKey(jobTitle : string): Observable<jobpost[]>{
+    return this.http.get<jobpost[]>(this.apiUrl+"job/getByJobTitle?jobTitle="+jobTitle);
+   }
+
+   
   
 }

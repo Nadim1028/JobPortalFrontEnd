@@ -1,1 +1,15 @@
-<p>job-delete works!</p>
+
+<div class="center"> 
+    
+    <label style="text-align: center;">Enter the job id: </label><br>
+    <input
+     type="number"
+     placeholder="Job Id"
+     [(ngModel)] = "jobid"
+     name="jobid"
+     >
+
+     <br>
+     <button (click) = " deleteJob(jobid) ">Delete</button>
+
+</div>

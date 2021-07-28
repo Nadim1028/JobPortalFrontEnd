@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z6">
+    <span>
+        
+        <p>Job Portal</p>
+         
+    </span>
+
+    <div class="spacer"></div>
+
+    <a mat-button routerLink="home" *ngIf="notLoggedIn">Home</a>
+    <a mat-button routerLink="employerlogin" *ngIf="notLoggedIn">Employer SignIn</a>
+    <a mat-button routerLink="admin-login/loginModule" *ngIf="notLoggedIn">JobSeeker SignIn</a>
+    <a mat-button routerLink="employersignup" *ngIf="notLoggedIn">Employer SignUp</a>
+    <a mat-button routerLink="jobseekerinfo" *ngIf="notLoggedIn">JobSeeker SignUp</a>
+    <a mat-button *ngIf="loggedIn"><mat-icon>account_circle</mat-icon>{{userName}}</a>
+    <a mat-raised-button color="accent" routerLink="home" *ngIf="notLoggedIn">More</a>
+    <a mat-raised-button color="green" *ngIf="loggedIn" (click)="sign_out()">Sign Out</a>
+</mat-toolbar>

@@ -25,6 +25,10 @@ import { JobseekerComponent } from './jobseeker/jobseeker.component';
 import { JobmanagerComponent } from './job-post/jobmanager/jobmanager.component';
 import { JobUpdateComponent } from './job-post/job-update/job-update.component';
 import { JobDeleteComponent } from './job-post/job-delete/job-delete.component';
+import { BarComponent } from './bar/bar.component';
+import { JobseekerLoginComponent } from './jobseeker-login/jobseeker-login.component';
+import { JobseekerSignupComponent } from './jobseeker-signup/jobseeker-signup.component';
+import { JobseekerInfoComponent } from './jobseeker-info/jobseeker-info.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { JobDeleteComponent } from './job-post/job-delete/job-delete.component';
     JobseekerComponent,
     JobmanagerComponent,
     JobUpdateComponent,
-    JobDeleteComponent  
+    JobDeleteComponent,
+    BarComponent,
+    JobseekerLoginComponent,
+    JobseekerSignupComponent,
+    JobseekerInfoComponent  
   ],
   imports: [
     BrowserModule,

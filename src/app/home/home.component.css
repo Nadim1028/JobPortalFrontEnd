@@ -1,0 +1,17 @@
+.style1{
+    background-color: blue;
+    border: 1px solid red;
+
+}
+
+.style2{
+    background-color: blue;
+    border: 1px solid red;
+    padding: 5px 3px 2px 1px;
+}
+
+.search{
+    font-size: large;
+    padding: 10px;
+    padding-right: 15px;
+}

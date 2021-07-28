@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobService } from 'src/app/service/job.service';
 
 @Component({
   selector: 'app-job-delete',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobDeleteComponent implements OnInit {
 
-  constructor() { }
+  jobid : number;
+
+
+  constructor(public jobservice : JobService) { }
 
   ngOnInit(): void {
+  }
+
+
+  deleteJob(jobid : number) : void{
+   // alert("deleteJob")
+    this.jobservice.deleteJobService(jobid).subscribe(
+      response => {
+        alert("deleteJob")
+        console.log(response);
+        alert("Delete successfully!");
+        window.location.reload();
+      }
+    );
   }
 
 }

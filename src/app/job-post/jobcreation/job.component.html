@@ -87,5 +87,26 @@
 
     </form>
 
+    <div class="center"> 
+    
+        <form (ngSubmit)="search()"> 
+
+        <label style="text-align: center;">Enter the search key: </label><br>
+        <input
+         type="text"
+         placeholder="SearchKey"
+         [(ngModel)] = "searchKey"
+         name="searchKey"
+         >
+
+         <button type="submit"> Submit </button>
+    
+         <br>
+         <!-- //<input type="text" name="search" [(ngModel)]="search" id="search" placeholder="search news" /> -->
+        </form>
+        
+    
+    </div>
+
    
 </div>
