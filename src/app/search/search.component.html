@@ -1,0 +1,33 @@
+
+<div class="container pt-5">
+    <h2> Searched Jobs : </h2>
+        <div *ngFor="let job of myjobs | slice:0:100; let i = index;">
+              <div class="rounded border border-primary jobs-wrap">                 
+                  <div class="company-logo blank-logo text-center text-md-left pl-3">
+
+                       <div class="job-details h-50">                             
+                           <div class="p-3 align self-center">                                  
+                                 <h3>{{job.jobTitle}}</h3>
+                   
+                                <div class="mr-3">
+                                    <span class="material-icons">location_on</span>
+                                    {{job.jobLocation}}
+                                </div>
+                     
+                                <div class="mr-3">
+                                    <span class="fa fa-money"></span> ${{job.salary}}     
+                                </div>                     
+                            </div>
+                        </div>
+
+                        <div class="job category align self-center">
+                            <div class="p-3">
+                                <span class="text-info p-2 rounded border border-info">{{job.jobType}}</span>
+                            </div>
+                        </div>
+        
+                    </div>
+                
+                </div>                 
+        </div>
+    </div>

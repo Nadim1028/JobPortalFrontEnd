@@ -1,0 +1,58 @@
+<div class="controller offset-sm-1">
+    <h2>Job Posts</h2>
+
+        <div *ngFor="let employer of employers | slice:0:10; let i = index;" class="row">
+
+              <div class="rounded border border-primary jobs-wrap col-sm-9" >                 
+                  <div class="company-logo blank-logo text-center text-md-left pl-3">
+
+                       <div class="job-details h-50">                             
+                           <div class="p-3 align self-center">                                  
+                                 <h2> &nbsp;&nbsp;&nbsp;{{employer.userName}}</h2>
+
+                                 
+                   
+                                <div class="p-3 align self-center">
+                                    
+                                    <br>
+                                    <h2>{{employer.companyName}}</h2>
+                                </div>
+                     
+                                <div class="p-3 align self-center">
+                                    <br>
+                                    <h2>{{employer.industryType}}</h2>
+                                        
+                                </div>   
+
+                                <div class="p-3 align self-center">
+                                    <br>
+                                    <h2>{{employer.yearOfEstablishment}}</h2>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
+        
+                    </div>
+                
+                </div>  
+
+
+
+                <div class="col-sm-3 "> 
+                    
+                       
+                        <br>
+                        <br>
+                        <br>
+                        <button  mat-raised-button (click)="deleteEmployer(employer.id)">DELETE </button>
+
+                </div>
+
+                
+                
+        </div>
+
+
+    </div>

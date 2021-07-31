@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../service/employer-login.service';
 
 @Component({
   selector: 'app-employer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public employerUpdateService : LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  updateEmployer(){
+
   }
 
 }

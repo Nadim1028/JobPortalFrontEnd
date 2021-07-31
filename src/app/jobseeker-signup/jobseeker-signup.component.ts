@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from '../service/signup.service';
+import { Router } from '@angular/router';
+import { JobSeekerSignupService } from '../service/job-seeker-signup.service';
 
 @Component({
   selector: 'app-jobseeker-signup',
@@ -8,13 +9,38 @@ import { SignupService } from '../service/signup.service';
 })
 export class JobseekerSignupComponent implements OnInit {
 
-  constructor(public signupService:SignupService) { }
+  constructor(public signupService:JobSeekerSignupService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   signUpUser(){
-    
+    this.signupService.signupUserInService().subscribe(
+      response  => 
+      {
+       // alert("Response");
+        if(response!=null)
+        {
+            if(response==true)
+            {
+             alert("Sign up successful");
+             
+                this.router.navigate(["jobseekerlogin"])
+            }
+
+            else
+            {
+              alert("Try again...");
+            }
+        }
+
+        else
+          {
+            alert("Try again...");
+          }
+
+       }
+    )
   }
 
 }

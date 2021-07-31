@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from  "@angular/router";
-import {SignupService}  from '../service/signup.service';
+import { SignupService } from '../service/employer-signup.service';  
 
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  templateUrl: './employer-signup.component.html',
+  styleUrls: ['./employer-signup.component.css']
 })
 
 export class SignupComponent implements OnInit 
@@ -21,14 +21,14 @@ export class SignupComponent implements OnInit
     this.signupService.signupUserInService().subscribe(
       response  => 
       {
-        alert("Response");
+       // alert("Response");
         if(response!=null)
         {
             if(response==true)
             {
-             alert("Sign up successful");
+             //alert("Sign up successful");
              
-                this.router.navigate(["login"])
+                this.router.navigate(["employerlogin"])
             }
 
             else
@@ -37,10 +37,14 @@ export class SignupComponent implements OnInit
             }
         }
 
-      }
+        else
+          {
+            alert("Try again...");
+          }
+
+       }
     )
   }
-
 
 
 }

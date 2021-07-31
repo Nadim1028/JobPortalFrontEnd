@@ -1,4 +1,4 @@
-export class jobseeker{
+export class JobSeekerInfo{
     public FirstName : string;
     public LastName : string;
     public Gender : string;

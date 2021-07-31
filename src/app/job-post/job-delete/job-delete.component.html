@@ -1,5 +1,5 @@
 
-<div class="center"> 
+<!-- <div class="center"> 
     
     <label style="text-align: center;">Enter the job id: </label><br>
     <input
@@ -12,4 +12,64 @@
      <br>
      <button (click) = " deleteJob(jobid) ">Delete</button>
 
-</div>
+</div> -->
+
+<div class="controller">
+    <h2>Job Posts</h2>
+
+        <div *ngFor="let job of jobs | slice:0:10; let i = index;" class="row">
+
+              <div class="rounded border border-primary jobs-wrap col-sm-9" >                 
+                  <div class="company-logo blank-logo text-center text-md-left pl-3">
+
+                       <div class="job-details h-50">                             
+                           <div class="p-3 align self-center">                                  
+                                 <h2>{{job.jobTitle}}</h2>
+
+                                 
+                   
+                                <div class="mr-3">
+                                    <span class="material-icons">location_on</span>
+                                    {{job.jobLocation}}
+                                    <br>
+                                </div>
+                     
+                                <div class="mr-3">
+                                    <br>
+                                    <span class="fa fa-money"></span> ${{job.salary}}     
+                                </div>                     
+                            </div>
+                        </div>
+
+                        <div class="job category align self-center">
+                            <div class="p-3">
+                                <span class="text-info p-2 rounded border border-info">{{job.jobType}}</span>
+                            </div>
+                        </div>
+        
+                    </div>
+                
+                </div>  
+
+
+
+                <div class="col-sm-3 "> 
+                    
+                       
+                        <br>
+                        <br>
+                        <button  mat-raised-button (click)="updatejob(job)">UPDATE </button>
+    
+                        <br>
+                        <br>
+                        <br>
+                        <button  mat-raised-button (click)="deleteJob(job.id)">DELETE </button>
+
+                </div>
+
+                
+                
+        </div>
+
+
+    </div>

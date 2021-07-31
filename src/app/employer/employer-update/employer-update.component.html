@@ -1,0 +1,88 @@
+<div class=" offset-sm-3 employer">
+
+    <form [formGroup]="employerUpdateService.formModelEmployer"> 
+
+        <div> 
+            <label >CompanyEmail:</label>
+            <br>
+            <input
+             class="form-control"
+             formControlName="companyemail"
+             [ngModel]="employer.companyEmail"
+             type="text">
+        </div>
+
+        
+
+        <div> 
+            <label >CompanyName:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="employer.companyName"
+             formControlName="companyname"
+             type="text">
+        </div>
+
+        <div> 
+            <label >CompanyAddress:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="employer.companyAddress"
+             formControlName="companyadd"
+             type="text">
+        </div>
+
+        <div> 
+            <label >IndustryType:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="employer.industryType"
+             formControlName="industrytype"
+             type="text">
+        </div>
+
+        <div> 
+            <label >CompanyContactNo:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="employer.companyContactNo"
+             formControlName="companycontactno"
+             type="text">
+        </div>
+
+        <div> 
+            <label >YearOfEstablishment:</label>
+            <br>
+            <input
+            [ngModel]="employer.yearOfEstablishment"
+            class="form-control"
+             formControlName="year"
+             type="text">
+        </div>
+
+        <div> 
+            <label >TradeLicenseNo:</label>
+            <br>
+            <input
+            [ngModel]="employer.tradeLicenseNo"
+            class="form-control"
+             formControlName="tradelicense"
+             type="text">
+        </div>
+
+       
+        <div>
+            <br>
+            <button type="submit" (click)="updateEmployer()" style="background-color: cornsilk;" mat-raised-button>Update Employer</button>
+        </div>
+
+    </form>
+
+   
+</div>
+
+<div class="offset-sm-3"> </div>

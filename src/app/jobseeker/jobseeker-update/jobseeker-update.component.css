@@ -1,0 +1,19 @@
+.jobseeker{
+    padding : 10px;
+    align-content: center;
+}
+
+.center {
+    padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 200px;
+    }
+
+    input.form-control:focus{
+      box-shadow: none;
+      border-bottom-color: black;
+      width: 200px;
+  }

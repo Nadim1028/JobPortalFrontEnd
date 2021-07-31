@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../service/login.service';
+import { LoginService } from '../service/employer-login.service';
 import { ActivatedRoute, Router } from  "@angular/router";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from "@angular/material/dialog"
+import { BarService } from '../service/bar.service';
 
 
 
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './employer-login.component.html',
+  styleUrls: ['./employer-login.component.css']
 })
 
 
 export class LoginComponent implements OnInit {
 
 
-  constructor(public loginService:LoginService, private router : Router,public dialog: MatDialog) { }
+  constructor(public loginService:LoginService, private router : Router,public dialog: MatDialog,public service: BarService) { }
 
   
 
@@ -39,16 +40,17 @@ export class LoginComponent implements OnInit {
              
               if(this.loginService.formModel.value.username=="admin" && this.loginService.formModel.value.password=="nadim123" )
              {
-               localStorage.setItem("isLoggedIn","admin");
-
+              localStorage.setItem("isLoggedIn","admin");
+              this.service.sendUpdate("update");
               this.router.navigate(["admin"])
 
              }
               else{
                 localStorage.setItem("isLoggedIn","employer");
                 localStorage.setItem("user", JSON.stringify(response));
-
-                this.router.navigate(["home"])
+                console.log(response)
+                this.service.sendUpdate("update");
+                this.router.navigate(["employer"])
 
               }
             }
@@ -66,7 +68,11 @@ export class LoginComponent implements OnInit {
 
   signup(){
     //alert("Sign up page");
-    this.router.navigate(["signup"])
+    this.router.navigate(["employersignup"])
+  }
+
+  navigateToEmployer(){
+    this.router.navigate(["employer"])
   }
 
 }

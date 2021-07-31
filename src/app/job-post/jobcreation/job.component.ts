@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from 'src/app/service/job.service';
 import { ActivatedRoute, Router } from  "@angular/router";
-import {jobpost} from "src/app/models/jobpost"
+import {Job} from "src/app/models/jobpost"
 
 @Component({
   selector: 'app-job',
@@ -10,9 +10,9 @@ import {jobpost} from "src/app/models/jobpost"
 })
 export class JobComponent implements OnInit {
 
-  jobs: jobpost[] = [];
+  jobs: Job[] = [];
   searchKey: string; 
-  searchedJobs : jobpost[] = [];
+  searchedJobs : Job[] = [];
 
   constructor(public jobService:JobService, private router : Router) { }
 
@@ -31,7 +31,7 @@ export class JobComponent implements OnInit {
             {
              alert("Job created successfully");
              
-                this.router.navigate(["home"])
+                this.router.navigate(["employer/jobmanager/jobdelete"])
             }
 
             else

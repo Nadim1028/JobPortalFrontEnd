@@ -1,8 +1,9 @@
 
 <mat-card>
-  <mat-toolbar color="primary">Sign in to Job Portal </mat-toolbar>
+  <mat-toolbar color="primary">Sign in for Employer </mat-toolbar>
 
   <form [formGroup]="loginService.formModel" > 
+    <br>
   
     <p>
       <mat-form-field>
@@ -25,7 +26,7 @@
 
     <div fxLayout = "row">
         <div class="button2">
-          <button type="submit" (click)="loginTest()" style ="color: blue;" mat-button>Forget password?</button>
+          <button type="submit" (click)="navigateToEmployer()" style ="color: blue;" mat-button>Forget password?</button>
         </div>
 
         <div class="button3">

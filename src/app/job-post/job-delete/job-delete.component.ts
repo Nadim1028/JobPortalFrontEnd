@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Job } from 'src/app/models/jobpost';
 import { JobService } from 'src/app/service/job.service';
 
 @Component({
@@ -9,24 +11,36 @@ import { JobService } from 'src/app/service/job.service';
 export class JobDeleteComponent implements OnInit {
 
   jobid : number;
+  jobs: Job[] = [];
 
 
-  constructor(public jobservice : JobService) { }
+  constructor(public jobservice : JobService, private router : Router) { }
 
   ngOnInit(): void {
+    this.loadJobs();
   }
 
 
   deleteJob(jobid : number) : void{
-   // alert("deleteJob")
     this.jobservice.deleteJobService(jobid).subscribe(
       response => {
-        alert("deleteJob")
         console.log(response);
         alert("Delete successfully!");
-        window.location.reload();
+        this.loadJobs();
       }
     );
+  }
+
+  updatejob(job : Job) : void{
+    localStorage.setItem("jobforupdate", JSON.stringify(job));
+    this.router.navigate(["/employer/jobmanager/jobupdate"]);
+  }
+
+  loadJobs( ):void{
+    this.jobservice.getJobsByEmployerId().subscribe(response=> {this.jobs = response}
+      )
+      ;
+      console.log(this.jobs);
   }
 
 }

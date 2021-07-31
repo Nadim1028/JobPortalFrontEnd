@@ -1,0 +1,28 @@
+
+ <form [formGroup]="signupService.formModel" >
+
+    <div id="login-box">
+        <div class="left">
+          <h1>Employer SignUp</h1>
+          
+          <input type="text" formControlName="username" placeholder="Username" />
+          <input type="text" formControlName="email" placeholder="Company Email" />
+          <input type="password" formControlName="password" placeholder="Password" />
+          <input type="password" formControlName="password2" placeholder="Retype password" />
+          <input type="text" formControlName="companyname" placeholder="Company Name" />
+          <input type="text" formControlName="companyaddress" placeholder="Company Address" />
+          <input type="text" formControlName="industrytype" placeholder="Industry Type" />
+          <input type="text" formControlName="companycontact" placeholder="Company Contact No" />
+          <input type="text" formControlName="yearofestablishment" placeholder="Year Of Establishment" />
+          <input type="text" formControlName="tradelicense" placeholder="Trade License No" />
+
+
+        
+          <input type="submit" (click)="signUpUser()" name="signup_submit" value="Sign me up" /> 
+          
+        </div>
+
+      </div>
+      
+ </form>
+

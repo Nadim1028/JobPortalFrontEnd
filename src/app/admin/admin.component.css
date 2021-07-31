@@ -1,0 +1,80 @@
+.main-div  mat-card{
+  padding: 0px;
+}
+
+.button-div {
+ padding:  10px 25px;
+ margin: 0;
+ position: relative;
+ top: 50%;
+ left: 50%;
+ -ms-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+}
+
+.login-form{
+  padding: 20px;
+}
+
+.button-div2 {
+  padding:  10px 25px;
+  margin: 0;
+  position: absolute;
+  padding-top: 20px;
+  top: 80%;
+  left: 50%;
+  
+}
+
+
+
+
+
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 400px;
+}
+
+
+mat-card-title,mat-toolbar,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+
+.button {
+  display: flex;
+  background: #16a085;
+  text-align:center;
+  justify-content: center;
+  width: 120px;
+  height: 32px;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+}
+
+.button2 {
+  display: flex;
+  justify-content: flex-start;
+  text-align:center;
+  padding-right: 120px;
+}
+
+.button3 {
+  display: flex;
+  justify-content: flex-end;
+  text-align:center;
+}

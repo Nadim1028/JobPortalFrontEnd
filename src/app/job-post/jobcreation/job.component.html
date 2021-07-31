@@ -2,25 +2,29 @@
 
     <form [formGroup]="jobService.formModel"> 
         <div> 
-            <label for="jobTitle">JobTitle:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="jobTitle">JobTitle:</label>
             <br>
-            <input
+            <input class="form-control"
              formControlName="jobtitle"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">JobDetails:</label>
+            <label for="jobTitle">JobType:</label>
             <br>
             <input
-             formControlName="jobdetails"
+            class="form-control"
+             formControlName="jobtype"
              type="text">
         </div>
+
+        
         
         <div> 
             <label for="jobTitle">Vacancy:</label>
             <br>
             <input
+            class="form-control"
              formControlName="vacancy"
              type="text">
         </div>
@@ -29,6 +33,7 @@
             <label for="jobTitle">EmploymentStatus:</label>
             <br>
             <input
+            class="form-control"
              formControlName="employmentstatus"
              type="text">
         </div>
@@ -37,6 +42,7 @@
             <label for="jobTitle">Experience:</label>
             <br>
             <input
+            class="form-control"
              formControlName="experience"
              type="text">
         </div>
@@ -45,6 +51,7 @@
             <label for="jobTitle">Gender:</label>
             <br>
             <input
+            class="form-control"
              formControlName="gender"
              type="text">
         </div>
@@ -53,6 +60,7 @@
             <label for="jobTitle">Salary:</label>
             <br>
             <input
+            class="form-control"
              formControlName="salary"
              type="text">
         </div>
@@ -61,6 +69,7 @@
             <label for="jobTitle">Age:</label>
             <br>
             <input
+            class="form-control"
              formControlName="age"
              type="text">
         </div>
@@ -69,6 +78,7 @@
             <label for="jobTitle">JobLocation:</label>
             <br>
             <input
+            class="form-control"
              formControlName="joblocation"
              type="text">
         </div>
@@ -77,17 +87,28 @@
             <label for="jobTitle">Deadline:</label>
             <br>
             <input
+            class="form-control"
              formControlName="deadline"
              type="text">
         </div>
 
+        <div> 
+            <label for="jobTitle">JobDetails:</label>
+            <br>
+            <input
+            class="form-control"
+             formControlName="jobdetails"
+             type="text">
+        </div>
+
         <div>
-            <button type="submit" (click)="createJob()"  mat-button>Create Job</button>
+            <br>
+            <button type="submit" (click)="createJob()" style="background-color: cornsilk;"   mat-raised-button>CREATE</button>
         </div>
 
     </form>
 
-    <div class="center"> 
+    <!-- <div class="center"> 
     
         <form (ngSubmit)="search()"> 
 
@@ -102,11 +123,11 @@
          <button type="submit"> Submit </button>
     
          <br>
-         <!-- //<input type="text" name="search" [(ngModel)]="search" id="search" placeholder="search news" /> -->
+         //<input type="text" name="search" [(ngModel)]="search" id="search" placeholder="search news" 
         </form>
         
     
-    </div>
+    </div> -->
 
    
 </div>

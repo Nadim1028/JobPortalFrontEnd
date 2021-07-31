@@ -1,8 +1,30 @@
 
-
-
-<h1> This is Admin </h1>
-<h1> This is Admin </h1>
-<h1> This is Admin </h1>
-<h1> This is Admin </h1>
-<h1> This is Admin </h1>
+<mat-card>
+    <mat-toolbar color="primary">Admin SignIn </mat-toolbar>
+  
+    <form  > 
+      <br>
+    
+      <p>
+        <mat-form-field>
+          <input #nameInput type="text" name="username" matInput placeholder="Username" >
+        </mat-form-field>
+      </p>
+  
+      <p>
+        <mat-form-field>
+          <input #nameInput1 type="password" name="password" matInput placeholder="Password" >
+        </mat-form-field>
+      </p>
+  
+  
+  
+      <div class="button">
+          <button type="submit" (click)="loginTest()"  mat-button>SIGN IN</button>
+      </div>
+  
+    
+    
+    </form>
+  
+  </mat-card>

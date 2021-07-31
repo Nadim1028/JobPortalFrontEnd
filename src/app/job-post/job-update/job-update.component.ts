@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from 'src/app/service/job.service';
 import { ActivatedRoute, Router } from  "@angular/router";
+import { Job } from 'src/app/models/jobpost';
+import { JsonpClientBackend } from '@angular/common/http';
 
 @Component({
   selector: 'app-job-update',
@@ -9,23 +11,27 @@ import { ActivatedRoute, Router } from  "@angular/router";
 })
 export class JobUpdateComponent implements OnInit {
 
+  job : Job | any;
+
   constructor(public jobupdateService:JobService, private router : Router) { }
 
   ngOnInit(): void {
+    this.job=localStorage.getItem("jobforupdate");
+    this.job = JSON.parse(this.job);
+    console.log(this.job)
   }
 
   updateJob(){
-    this.jobupdateService.updateJobService().subscribe(
+    this.jobupdateService.updateJobService(this.job).subscribe(
       response  => 
       {
-        alert("Response");
         if(response!=null)
         {
-            if(response==true)
+            if(response!=false)
             {
              alert("Job updated successfully");
              
-                this.router.navigate(["home"])
+                this.router.navigate(["/employer/jobmanager/"])
             }
 
             else

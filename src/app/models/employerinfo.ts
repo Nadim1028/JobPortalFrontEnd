@@ -7,7 +7,5 @@ export class employer{
     public CompanyContactNo: string;
     public YearOfEstablishment: string;
     public TradeLicenseNo: string;
-    public Password: string;
-    public ConfirmationPassword: string;
 }
 

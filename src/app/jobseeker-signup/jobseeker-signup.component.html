@@ -1,1 +1,36 @@
-<p>jobseeker-signup works!</p>
+
+ <form [formGroup]="signupService.formModel" >
+
+    <div id="login-box">
+        <div class="left">
+          <h2>Job Seeker SignUp</h2>
+          
+          <input type="text" formControlName="username" placeholder="Username" />
+          <input type="text" formControlName="email" placeholder="E-mail" />
+          <input type="password" formControlName="password" placeholder="Password" />
+          <input type="password" formControlName="password2" placeholder="Retype password" />
+          <input type="text" formControlName="firstname" placeholder="First Name" />
+          <input type="text" formControlName="lastname" placeholder="Last Name" />
+          <input type="text" formControlName="gender" placeholder="Gender" />
+          <input type="text" formControlName="mobilenum" placeholder="Mobile Number" />
+          <input type="text" formControlName="address" placeholder="Address" />
+          
+
+      
+          <input type="submit" (click)="signUpUser()" name="signup_submit" value="Sign me up" /> 
+          
+        </div>
+
+       
+        <div class="right">
+          <span class="loginwith">Sign in with<br />social network</span>
+          
+          <button class="social-signin facebook">Log in with facebook</button>
+          <button class="social-signin twitter">Log in with LinkedIn</button>
+          <button class="social-signin google">Log in with Google</button>
+        </div>
+        <div class="or">OR</div>
+      </div>
+
+ </form>
+

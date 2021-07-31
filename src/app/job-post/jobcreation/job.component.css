@@ -11,3 +11,10 @@
       height: 300px;
       width: 400px;
     }
+
+    input.form-control:focus{
+      box-shadow: none;
+      border-bottom-color: black;
+  }
+
+ 

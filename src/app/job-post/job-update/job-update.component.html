@@ -2,98 +2,124 @@
 
     <form [formGroup]="jobupdateService.formModel1"> 
 
-        <div> 
-            <label for="jobTitle">Job Id:</label>
-            <br>
-            <input
-             formControlName="jobid"
-             type="number">
-        </div>
+        
 
         <div> 
-            <label for="jobTitle">JobTitle:</label>
+            <br>
+            <br>
+            <label >JobTitle:</label>
             <br>
             <input
+             class="form-control"
              formControlName="jobtitle"
+             [ngModel]="job.jobTitle"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">JobDetails:</label>
+            <label >JobType:</label>
             <br>
             <input
+             class="form-control"
+             formControlName="jobtype"
+             [ngModel]="job.jobType"
+             type="text">
+        </div>
+
+        <div> 
+            <label >JobDetails:</label>
+            <br>
+            <input
+             class="form-control"
              formControlName="jobdetails"
+             [ngModel]="job.jobDetailsFilePath"
+
              type="text">
         </div>
 
-        
-        
-        <div> 
-            <label for="jobTitle">Vacancy:</label>
+        <div>  <label > Vacancy:</label>
             <br>
             <input
+             [ngModel]="job.vacancy"
+             class="form-control"
              formControlName="vacancy"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">EmploymentStatus:</label>
+            <label >EmploymentStatus:</label>
             <br>
             <input
+            class="form-control"
+            [ngModel]="job.employmentStatus"
              formControlName="employmentstatus"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">Experience:</label>
+            <label >Experience:</label>
             <br>
             <input
+            class="form-control"
+            [ngModel]="job.experience"
              formControlName="experience"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">Gender:</label>
+            <label >Gender:</label>
             <br>
             <input
+            class="form-control"
+            [ngModel]="job.gender"
+
              formControlName="gender"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">Salary:</label>
+            <label >Salary:</label>
             <br>
             <input
+            class="form-control"
+            [ngModel]="job.salary"
              formControlName="salary"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">Age:</label>
+            <label >Age:</label>
             <br>
             <input
+            [ngModel]="job.age"
+            class="form-control"
              formControlName="age"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">JobLocation:</label>
+            <label >JobLocation:</label>
             <br>
             <input
+            [ngModel]="job.jobLocation"
+            class="form-control"
              formControlName="joblocation"
              type="text">
         </div>
 
         <div> 
-            <label for="jobTitle">Deadline:</label>
+            <label >Deadline:</label>
             <br>
             <input
+            [ngModel]="job.deadline"
+            class="form-control"
              formControlName="deadline"
              type="text">
         </div>
 
         <div>
-            <button type="submit" (click)="updateJob()"  mat-button>Update Job</button>
+            <br>
+            <button type="submit" (click)="updateJob()" style="background-color: cornsilk;" mat-raised-button>Update Job</button>
         </div>
 
     </form>

@@ -1,0 +1,80 @@
+<div class=" offset-sm-3 jobseeker">
+
+    <form [formGroup]="jobseekerUpdateService.formModelJobseeker"> 
+
+        <div> 
+            <label >Email:</label>
+            <br>
+            <input
+             class="form-control"
+             formControlName="email"
+             [ngModel]="jobseekerauth.email"
+             type="text">
+        </div>
+
+        
+
+        <div> 
+            <label >First Name:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="jobseekerauth.firstName"
+             formControlName="firstname"
+             type="text">
+        </div>
+
+        <div> 
+            <label >Last Name:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="jobseekerauth.lastName"
+             formControlName="lastname"
+             type="text">
+        </div>
+
+        <div> 
+            <label >Gender:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="jobseekerauth.gender"
+             formControlName="gender"
+             type="text">
+        </div>
+
+        <div> 
+            <label >Address:</label>
+            <br>
+            <input
+            class="form-control"
+            [ngModel]="jobseekerauth.address"
+             formControlName="address"
+             type="text">
+        </div>
+
+        <div> 
+            <label >Mobile Number:</label>
+            <br>
+            <input
+            [ngModel]="jobseekerauth.mobileNum"
+            class="form-control"
+             formControlName="mobilenum"
+             type="text">
+        </div>
+
+        
+
+       
+        <div>
+            <br>
+            <button type="submit" (click)="updateJobSeeker()" style="background-color: cornsilk;" mat-raised-button>Update JobSeeker</button>
+        </div>
+
+    </form>
+
+   
+</div>
+
+<div class="offset-sm-3"> </div>

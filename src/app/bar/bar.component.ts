@@ -18,6 +18,7 @@ export class BarComponent implements OnInit {
   notLoggedIn = true ;
   userName: string | any ;
   employerAuth: EmployerAuth | any ;
+  jobseekerauth : JobSeekerAuth | any;
   
   constructor(public router: Router, public service: BarService) { 
     this.subscriptionName= this.service.getUpdate().subscribe
@@ -42,22 +43,26 @@ export class BarComponent implements OnInit {
         
         this.employerAuth = localStorage.getItem('user') ;
         this.employerAuth = JSON.parse(this.employerAuth);
-        this.userName = this.employerAuth.UserName ;
+        this.userName = this.employerAuth.userName ;
+
+        console.log("User Name = "+this.userName);
 
       }
     }
 
-    // else if(isLoggedIn=='student'){
-    //   if(localStorage.getItem('user')!=null){
-    //     this.loggedIn = true ;
-    //     this.notLoggedIn = false ;
+    else if(isLoggedIn=='jobseeker'){
+      if(localStorage.getItem('user')!=null){
+        this.loggedIn = true ;
+        this.notLoggedIn = false ;
 
-    //     this.student = localStorage.getItem('user') ;
-    //     this.student = JSON.parse(this.student);
-    //     this.userName = this.student.studentName ;
+        this.jobseekerauth = localStorage.getItem('user') ;
+        this.jobseekerauth = JSON.parse(this.jobseekerauth);
+        this.userName = this.jobseekerauth.userName ;
+
+        console.log("User Name = "+this.userName);
         
-    //   }
-    // }
+      }
+    }
 
   }
 
