@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,6 +42,7 @@ import { AdminManagerComponent } from './admin/admin-manager/admin-manager.compo
 import { AdminJobManagerComponent } from './admin/admin-job-manager/admin-job-manager.component';
 import { AdminEmployerManagerComponent } from './admin/admin-employer-manager/admin-employer-manager.component';
 import { AdminJobseekerManagerComponent } from './admin/admin-jobseeker-manager/admin-jobseeker-manager.component';
+import { ApplicantsComponent } from './employer/applicants/applicants.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,8 @@ import { AdminJobseekerManagerComponent } from './admin/admin-jobseeker-manager/
     AdminManagerComponent,
     AdminJobManagerComponent,
     AdminEmployerManagerComponent,
-    AdminJobseekerManagerComponent  
+    AdminJobseekerManagerComponent,
+    ApplicantsComponent  
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,8 @@ import { AdminJobseekerManagerComponent } from './admin/admin-jobseeker-manager/
     FormsModule,
     ReactiveFormsModule,
     AppRoutesModule,
-    MatDialogModule
+    MatDialogModule,
+    Ng2SearchPipeModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

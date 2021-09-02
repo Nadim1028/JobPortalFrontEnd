@@ -13,28 +13,24 @@
 
     <div class="col-sm-6 row " > 
         <div  class="search1 col-sm-5.5" >
-            
-            <form (ngSubmit)="search()"> 
-
-                <input size="30" type="text" [(ngModel)] = "searchKey"
-                name="searchKey" placeholder="Search by company,job type, job title ">
-
-            </form>  
-
+                    
+            <input size="40" class="form-control" type="text" name="search" [(ngModel)]="searchKey" autocomplete="off" placeholder="Search by job location/type/title">
+                     
         </div>
+
         <div  class="search2 col-sm-2.5">
-           <select [(ngModel)]="selectedLevel" (change)="selected()"> 
+           <!-- <select [(ngModel)]="selectedLevel" (change)="selected()"> 
 
             <option *ngFor="let item of data" [ngValue]="item">{{item.name}}</option>
-               <!-- <option>Govt Job</option>
+                <option>Govt Job</option>
                <option>Private Job</option>
-               <option>NGO</option> -->
+               <option>NGO</option> 
 
-            </select>
+            </select> -->
         </div>
 
         <div class=" col-sm-3">
-            <button type="submit" class="button button5" (click)="search()" style="background-color:rgb(19, 167, 167)" > Search </button>
+            <!-- <button type="submit" class="button button5" (click)="search()" style="background-color:rgb(19, 167, 167)" > Search </button> -->
         </div>
 
     </div>
@@ -55,7 +51,7 @@
 
 <div class="container pt-5">
     <h2> Job Posts</h2>
-        <div *ngFor="let job of myjobs | slice:0:100; let i = index;">
+        <div *ngFor="let job of myjobs| filter:searchKey | slice:0:100; let i = index;">
               <div class="rounded border border-primary jobs-wrap">                 
                   <div class="company-logo blank-logo text-center text-md-left pl-3">
 

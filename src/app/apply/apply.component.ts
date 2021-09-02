@@ -49,7 +49,7 @@ apply(){
           {
            alert("Job applied successfully");
            
-              this.router.navigate(["/jobseeker"])
+              this.router.navigate(["/jobseeker/viewjobs"])
           }
 
           else

@@ -1,0 +1,50 @@
+<div class="container pt-5">
+    <h2> Job Applications: </h2>
+        <div *ngFor="let applications of filteredApplications  | slice:0:100; let i = index;">
+              <div class="rounded border border-primary jobs-wrap">                 
+                  <div class="company-logo blank-logo text-center text-md-left pl-3">
+                      
+
+                   
+                       <div class="job-details h-50">                             
+                            <div class="mr-3" >          
+                                 <h3>JobId:{{applications.jobId}}</h3>
+                            </div>
+
+                            <div class="mr-3">
+                                <h3> JobSeekerId:{{applications.jobSeekerId}} </h3>
+                                   
+                            </div>
+                   
+                            <div class="mr-3">
+                                <h3> Location:{{applications.jobLocation}} </h3>
+                                   
+                            </div>
+
+                            <div class="mr-3">
+                            
+                                <h3>             
+                                    CVFile:{{applications.filepath}}
+                                </h3>
+                                   
+                            </div>
+                     
+                            <div class="mr-3">
+                                    <h3>EmployerId:{{applications.employerId}}  </h3>    
+                            </div>           
+                            
+                            <div class="mr-3">
+                                <h3>ApplicationDeadline:{{applications.applicationDeadline}}  </h3>    
+                        </div>
+                          
+                        </div>
+
+                        
+        
+                    </div>
+                
+                </div>                 
+        </div>
+
+
+</div>

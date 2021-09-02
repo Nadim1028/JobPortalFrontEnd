@@ -11,6 +11,7 @@ import { JobService } from '../service/job.service';
 export class SearchComponent implements OnInit {
 
   myjobs: Job[] = [];
+  jobList:Job[] = [];
   searchKey : string | any;
   num : string;
 
@@ -25,11 +26,20 @@ constructor(public jobService:JobService,private router : Router) {
 
 ngOnInit():void {
   this.loadJobs();
+  this.loadJobList();
 }
 
 loadJobs():void{
   this.jobService.getJobsBysearchKey(this.searchKey).subscribe(response=> {this.myjobs = response});
  
+}
+
+loadJobList( ):void{
+  this.jobService.getJobs().subscribe(response=> {this.jobList = response}
+
+    )
+    ;
+    console.log(this.jobList);
 }
 
 }

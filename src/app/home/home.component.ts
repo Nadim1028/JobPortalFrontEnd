@@ -72,15 +72,15 @@ export class HomeComponent implements OnInit {
    // this.jobService.getJobsBysearchKey(this.searchKey).subscribe((searchedJobs)=> this.searchedJobs = searchedJobs);
 
   // localStorage.setItem("jobs", JSON.stringify(this.searchedJobs));
-   localStorage.setItem("searchKey",this.searchKey);
-   this.num = this.selectedLevel;
+  
+  //  localStorage.setItem("searchKey",this.searchKey);
+  //  this.num = this.selectedLevel;
 
-   if(this.selectedLevel==0)
-    localStorage.setItem("number","govt");
+  //  if(this.selectedLevel==0)
+  //   localStorage.setItem("number","govt");
 
-    this.router.navigate(["search"]);
-    
-     
+  //   this.router.navigate(["search"]);
+  
   }
 
 

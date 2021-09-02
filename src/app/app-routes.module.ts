@@ -24,7 +24,7 @@ import { AdminManagerComponent } from './admin/admin-manager/admin-manager.compo
 import { AdminJobManagerComponent } from './admin/admin-job-manager/admin-job-manager.component';
 import { AdminEmployerManagerComponent } from './admin/admin-employer-manager/admin-employer-manager.component';
 import { AdminJobseekerManagerComponent } from './admin/admin-jobseeker-manager/admin-jobseeker-manager.component';
-
+import { ApplicantsComponent } from './employer/applicants/applicants.component';
 
 const appRoutes: Routes = [
 
@@ -40,9 +40,11 @@ const appRoutes: Routes = [
           { path: 'job', component: JobComponent },
           { path: 'jobupdate', component: JobUpdateComponent },
           { path: 'jobdelete', component: JobDeleteComponent },
+          
             ]
     },
-    { path: 'employerupdate', component: EmployerUpdateComponent },      
+    { path: 'employerupdate', component: EmployerUpdateComponent },    
+    { path: 'applicants', component: ApplicantsComponent }  
     ]
 },
 
@@ -52,6 +54,7 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminComponent }, 
   //{ path: 'jobmanager', component: JobmanagerComponent },
   { path: 'jobupdate', component: JobUpdateComponent },
+  { path: 'applicants', component: ApplicantsComponent },
   { path: 'jobdelete', component: JobDeleteComponent },
   { path: 'jobseekerinfo', component: JobseekerInfoComponent },
 

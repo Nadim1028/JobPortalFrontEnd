@@ -3,7 +3,10 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Job } from '../models/jobpost';
+import {Apply} from '../models/apply';
 import { JobSeekerAuth } from '../models/jobseekerauth';
+import { Router } from '@angular/router';
+import { EmployerAuth } from '../models/employerauth';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +14,7 @@ import { JobSeekerAuth } from '../models/jobseekerauth';
 export class ApplyService {
 
   job : Job | any;
+  employerAuth: EmployerAuth | any ;
   jobseekerAuth: JobSeekerAuth | any ;
   private apiUrl = "http://localhost:5001/api/";
   constructor(private formBuilder:FormBuilder,private http: HttpClient) { }
@@ -61,10 +65,9 @@ export class ApplyService {
         "JobId" : job.id,
         "JobSeekerId":this.jobseekerAuth.id,
         "EmployerId": job.employerId,
-        "CompanyName": "",
         "JobTitle": job.jobTitle,
         "JobType": job.jobType,
-        "Filepath": "",
+        "Filepath": "CV.pdf",
         "JobLocation": job.jobLocation,
         "ApplicationDeadline": job.deadline
       }
@@ -78,8 +81,19 @@ export class ApplyService {
         return this.http.post<boolean>(this.apiUrl+"jobApplication/add", body);
       }
 
-      
     
     }
+
+
+    getApplicants(): Observable<Apply[]>{
+      return this.http.get<Apply[]>("http://localhost:5001/api/jobApplication/getAll");
+     }
+
+
+     getApplicationsByEmployerId(): Observable<Apply[]>{
+      this.employerAuth = localStorage.getItem('user') ;
+      this.employerAuth = JSON.parse(this.employerAuth);
+      return this.http.get<Apply[]>("http://localhost:5001/api/jobApplication/getApplicationsByEmployerId",{params:{"employerId" : this.employerAuth.id}});
+     }
   
 }
